@@ -1,0 +1,24 @@
+server:
+  port: 8087
+  servlet:
+    context-path: /zjn
+
+person:
+  age: 30
+  name: zhengsan
+  sex: true
+  list:
+    - aaa
+    - ddd
+    - ccc
+  map:
+    f: fff
+    g: ggg
+
+  cat:
+    age: 6
+    name: qute
+
+
+
+

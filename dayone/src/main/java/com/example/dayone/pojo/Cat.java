@@ -1,5 +1,9 @@
 package com.example.dayone.pojo;
 
+import org.springframework.validation.annotation.Validated;
+
+import javax.validation.constraints.*;
+
 /**
  * @program: dayone
  * @description: 动物猫
@@ -9,8 +13,11 @@ package com.example.dayone.pojo;
 
 public class Cat {
 
+    @Max(value = 5,message = "这只猫太老了")
+    @Min(value = 1,message = "这只猫太小了")
     private int age;
 
+    @Email
     private String name;
 
     public int getAge() {

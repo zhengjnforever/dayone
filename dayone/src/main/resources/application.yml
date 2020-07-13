@@ -3,9 +3,10 @@ server:
   servlet:
     context-path: /zjn
 
+#配置一个用户可以操作的数据接口
 person:
   age: 30
-  name: zhengsan
+  name: zhengsan@qq.com
   sex: true
   list:
     - aaa
@@ -20,5 +21,16 @@ person:
     name: qute
 
 
+spring:
+  profiles:
+    active: dev
+
+
+---
+server:
+  port: 8085
+  servlet:
+spring:
+  profiles: dev
 
 

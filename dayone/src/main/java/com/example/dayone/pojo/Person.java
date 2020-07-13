@@ -1,8 +1,13 @@
 package com.example.dayone.pojo;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.List;
 import java.util.Map;
 
@@ -14,13 +19,17 @@ import java.util.Map;
  **/
 
 @Component
+@PropertySource(value = {"classpath:myconfig.properties"})
 @ConfigurationProperties(prefix = "person")
 public class Person {
 
+
     private int age;
 
+    @Email
     private String name;
 
+    @NotNull
     private boolean sex;
 
     List<String> list;

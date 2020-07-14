@@ -1,7 +1,6 @@
 server:
   port: 8087
-  servlet:
-    context-path: /zjn
+
 
 #配置一个用户可以操作的数据接口
 person:
@@ -21,16 +20,10 @@ person:
     name: qute
 
 
-spring:
-  profiles:
-    active: dev
 
 
----
-server:
-  port: 8085
-  servlet:
-spring:
-  profiles: dev
+
+
+
 
 
